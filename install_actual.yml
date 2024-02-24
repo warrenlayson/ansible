@@ -1,0 +1,12 @@
+---
+
+- hosts: warren@192.168.0.117
+  become: true
+  tasks:
+  - name: install git and nodejs package
+    package:
+      update_cache: yes
+      state: latest
+      name:
+        - git
+        - nodejs
